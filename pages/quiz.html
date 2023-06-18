@@ -7,9 +7,26 @@
    <link rel="stylesheet" href="./../style.css">
 </head>
 <body>
-   <input class="quiz-users" placeholder="type amount of users" type="text">
-   <input class="quiz-winners" placeholder="type amount of winners" type="text">
-   <button class="intro__btn">Start</button>
-   <script src="./../index.js"></script>
+   <div class="quiz-wrapper">
+      <div class="quiz-nav">
+         <a class="intro__btn" href="./index.html">Home</a>
+         <a class="intro__btn" href="./password.html">Password</a>
+      </div>
+      <div class="quiz-body">
+         <h1 class="quiz-title">Mystery quiz</h1>
+         <div>
+            <input class="quiz-input quiz-users-input" placeholder="type amount of users" type="number">
+         </div>
+         <div>
+            <input class="quiz-input quiz-winners-input" placeholder="type amount of winners" type="number">
+         </div>
+         <button class="intro__btn quiz-start-btn">Start</button>
+         <div class="quiz-output">
+            <p class="quiz-output__title">Winners:</p>
+            <p class="quiz__winners"></p>
+         </div>
+      </div>
+   </div>
+   <script src="./../quiz.js"></script>
 </body>
 </html>

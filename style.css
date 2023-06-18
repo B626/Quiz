@@ -97,3 +97,49 @@ a{
 .intro__btn:hover{
    background-color: #7ac095;
 }
+
+.quiz-input{
+   margin: 15px 0;
+   font-size: 20px;
+   padding: 10px 20px;
+}
+
+.quiz-wrapper{
+   padding: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.quiz-body{
+   text-align: center;
+}
+
+.quiz-title{
+   font-size: 40px;
+}
+
+.quiz-winners{
+   font-size: 20px;
+}
+
+.quiz-output__title{
+   font-size: 30px;
+}
+
+.quiz-nav{
+   position: absolute;
+   top: 30px;
+   left: 10px;
+}
+
+.password-output__title{
+   font-size: 30px;
+}
+
+.label{
+   display: block;
+   font-size: 20px;
+   margin: 0 0 20px 0;
+}
+
