@@ -4,22 +4,22 @@ const output = document.querySelector('.password__output')
 const passwordInput = document.querySelector('.password-input')
 const isDigits = document.querySelector('.password__letters')
 const isUppercase = document.querySelector('.password__uppercase')
-isDigits.value = 'off'
-isUppercase.value = 'off'
+let digitsValue = 'off'
+let uppercaseValue = 'off'
 title.style.display = 'none'
 
 async function ajax() {
    try {
-      isDigits.value = isDigits.checked ? 'on' : 'off';
-      isUppercase.value = isUppercase.checked ? 'on' : 'off';
+      digitsValue = isDigits.checked ? 'on' : 'off';
+      uppercaseValue = isUppercase.checked ? 'on' : 'off';
       output.innerHTML = ''
       const passwordLength = document.querySelector('.password-input')
-      const response = await fetch(`http://www.random.org/strings/?num=1&len=${passwordLength.value}&digits=${isDigits.value}&upperalpha=${isUppercase.value}&loweralpha=on&unique=on&format=plain&rnd=new&quot`)
+      const response = await fetch(`http://www.random.org/strings/?num=1&len=${passwordLength.value}&digits=${digitsValue}&upperalpha=${uppercaseValue}&loweralpha=on&unique=on&format=plain&rnd=new&quot`)
       const password = await response.text()
       return password
    }
    catch (err) {
-      console.log(err)
+      console.error(err)
    }
 }
 
